@@ -28,14 +28,14 @@ do
     list[numItems]=Itemname;
             numItems++;
     }
-    if(numItems == 5)
+    else if(numItems == 5)
     {
             cout<<"You'll need a bigger list!"<<endl;
 
     }
     }
 }while(input != 'q' && input != 'Q');
-    cout<<"\n==ITEMS TO BUY=="<<endl;
+    cout<<"n==ITEMS TO BUY=="<<endl;
  for(int index = 0; index < 5; index++)
     {
             cout<<index + 1<<" "<<list[index]<<endl;
