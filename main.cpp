@@ -40,7 +40,7 @@ int main()
         }while(input != 'q' && input != 'Q');
         if(numItems == 0)
         {
-                cout<<"No Items to buy!"<<endl;
+                cout<<"No items to buy!"<<endl;
         }
         else
         {
