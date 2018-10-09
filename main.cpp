@@ -45,7 +45,7 @@ int main()
         else
         {
                 cout<<"==ITEMS TO BUY=="<<endl;
-                for(int index = 0; index > 0; index++)
+                for(int index = 0; index<list.size(); index++)
                 {
                         cout<<index + 1<<" "<<list[index]<<endl;
                 }
