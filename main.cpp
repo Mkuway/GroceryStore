@@ -37,13 +37,10 @@ int main()
                                         numItems++;
                                 }
                         }
-                                 if(input == 'D' || input == 'd')
+                                 if((input == 'D' || input == 'd') && list.size()!= 0)
                                         {
-                                         do
-                                         {
                                            cout<<list[list.size()-1]<<" was deleted from the list.\n";
                                           list.pop_back();
-                                        }while(list.size() != 0);
                                          }
 
                                 /*  else if(numItems == 5)
