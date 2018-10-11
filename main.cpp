@@ -17,26 +17,38 @@ int main()
                 cout<<"\n==GROCERY LIST MANAGER==";
                 cout<<"\nEnter your choice: ";
                 cout<<"\n (A)dd an item";
+               if(list.size()>0)
+               {
+                    cout<<"\n (D)elete last item";
+               }
                 cout<<"\n (Q)uit";
                 cout<<"\nYour choice (A/Q): ";
                 cin>>input;
-                if(input == 'a' || input == 'A')
-                {
-                        cout<<"What is the item?"<<endl;
-                        cin>> Itemname;
 
-                        if(numItems >= 0)
+                        if(input == 'a' || input == 'A')
                         {
-                                // list[numItems]=Itemname;
-                                list.push_back(Itemname);     
-                                numItems++;
-                        }
-                        /*  else if(numItems == 5)
-                            {
-                            cout<<"You'll need a bigger list!"<<endl;
+                                cout<<"What is the item?"<<endl;
+                                cin>> Itemname;
 
-                            }*/
-                }
+                                if(numItems >= 0)
+                                {
+                                        // list[numItems]=Itemname;
+                                        list.push_back(Itemname);     
+                                        numItems++;
+                                }
+                        }
+                                 if(input == 'D' || input == 'd')
+                                        {
+                                          cout<<list[list.size()-1]<<" was deleted from the list.\n";
+                                          list.pop_back();
+                                        }
+
+                                /*  else if(numItems == 5)
+                                    {
+                                    cout<<"You'll need a bigger list!"<<endl;
+
+                                    }*/
+
         }while(input != 'q' && input != 'Q');
         if(numItems == 0)
         {
@@ -49,7 +61,8 @@ int main()
                 {
                         cout<<index + 1<<" "<<list[index]<<endl;
                 }
-        }  
+        }
         return 0;
 
 }
+
